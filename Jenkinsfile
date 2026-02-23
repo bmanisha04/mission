@@ -20,5 +20,15 @@ pipeline {
 		
 		}
 
+        stage ("Build the image")
+		{
+		  steps {
+		  
+		    sh 'docker build -t mission:latest .'
+		   
+		  }
+		
+		}
+
            }
    }
